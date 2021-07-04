@@ -25,10 +25,10 @@ class PaymentsAdapter : ListAdapter<PaymentInfo, PaymentsAdapter.PaymentsViewHol
 
     class PaymentsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(payment: PaymentInfo) {
-            itemView.tvDesc.text = payment.desc.removeDuplicates()
-            itemView.tvAmount.text =  payment.amount.convertAmountToDecimalFormat()
-            itemView.tvCurrency.text = payment.currency.checkCurrency()
             itemView.tvCreated.text = payment.created.setCreatedTime()
+            itemView.tvDesc.text = payment.desc.removeDuplicates()
+            itemView.tvCurrency.text = payment.currency.checkCurrency()
+            itemView.tvAmount.text =  payment.amount.convertAmountToDecimalFormat()
         }
     }
 

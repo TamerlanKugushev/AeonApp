@@ -86,8 +86,6 @@ class PaymentsFragment : BaseFragment(), PaymentsView {
         paymentsRecyclerView.visibility = View.GONE
         progressBar.visibility = View.GONE
         when (paymentsScreenStates) {
-            PaymentsScreenStates.START -> {
-            }
             PaymentsScreenStates.LOADING -> {
                 paymentsRecyclerView.visibility = View.GONE
                 progressBar.visibility = View.VISIBLE
@@ -95,9 +93,6 @@ class PaymentsFragment : BaseFragment(), PaymentsView {
             PaymentsScreenStates.CONTENT -> {
                 paymentsRecyclerView.visibility = View.VISIBLE
                 progressBar.visibility = View.GONE
-            }
-            PaymentsScreenStates.ERROR -> {
-
             }
         }
     }
